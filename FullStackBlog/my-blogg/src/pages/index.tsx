@@ -1,42 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Link from 'next/link';
+import styles from '../styles/Home.module.css';
+import Header from '../components/header';
+import Footer from '../components/footer';
+import SideMenu from '../components/sideMenu';
 
-interface WeatherForecast {
-    date: string;
-    temperatureC: string;
-    summary: string;
-}
 
-const HomePage = () => {
-  const [weatherData, setWeatherData] = useState<WeatherForecast[]>([]);
-
-  useEffect(() => {
-    fetch('/api/weather')
-      .then((response) => response.json())
-      .then((data) => {
-        console.log('Fetched data:', data);
-        setWeatherData(data);
-      })
-      .catch((error) => console.error(error));
-  }, []);
-
-  console.log('Weather data:', weatherData);
-
+const Home: React.FC = () => {
   return (
     <div>
-      <h1>Weather Forecast</h1>
-      {Array.isArray(weatherData) ? (
-        weatherData.map((forecast, index) => (
-          <div key={index}>
-            <p>Date: {forecast.date}</p>
-            <p>Temperature: {forecast.temperatureC}</p>
-            <p>Summary: {forecast.summary}</p>
-          </div>
-        ))
-      ) : (
-        <p>No weather data available.</p>
-      )}
+    <SideMenu />
+    <Header />
+    <div className="container">
+  <div className="row">
+    <div className={`col-md-4 offset-md-4 ${styles.mainContent}`}>
+      <div className={`${styles.aboutMe}`}>
+        <h2 className="text-center">About Me</h2>
+        <p className="text-center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius consequat sem vitae
+          ultricies. Proin in sollicitudin ligula. Quisque id blandit nisl. In eget iaculis ipsum.
+          Aliquam erat volutpat. Mauris volutpat euismod ex, vel ullamcorper urna consequat ac.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+    <Footer />
     </div>
   );
 };
 
-export default HomePage;
+export default Home;

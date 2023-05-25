@@ -1,0 +1,20 @@
+.headerTitle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0000009a;
+    padding: 20px;
+    text-align: center;
+}
+
+.headerTitle h1 {
+    color: white;
+  font-size: 24px; /* Adjust the font size as desired */
+  margin: 0; /* Remove the margin to eliminate any extra space */
+  text-transform: uppercase; /* Make the text uppercase */
+}
+
+.headerLine {
+  display: none; /* Hide the line */
+}
