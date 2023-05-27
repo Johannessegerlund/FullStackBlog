@@ -8,12 +8,17 @@ const SideMenu: React.FC = () => {
       <nav className={`bg-dark ${styles.sideMenu} ${styles.left}`}>
         <ul className="nav flex-column">
           <li className="nav-item" style={{ marginTop: '30%' }}>
-            <Link href="/blog-post">
+            <Link href="/blog-posts">
               <p className="nav-link text-white">Blog Post</p>
             </Link>
           </li>
+          <li className="nav-item" style={{ marginTop: '30%' }}>
+            <Link href="/create-blog-post">
+              <p className="nav-link text-white">Skapa blogginlägg</p>
+            </Link>
+          </li>
           <li className="nav-item">
-            <Link href="/weather-forecast">
+            <Link href="/weather">
               <p>Weather Forecast</p>
             </Link>
           </li>
