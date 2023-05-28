@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react';
 import { fetchWeatherForecasts } from '../../api';
+import Header from '../components/header';
+import Footer from '../components/footer';
+import SideMenu from '../components/sideMenu';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 type WeatherForecast = {
   date: string;
@@ -26,6 +30,8 @@ const Weather: React.FC = () => {
 
   return (
     <div>
+        <Header/>
+        <SideMenu />
       <h1>Weather Forecasts</h1>
       {error ? (
         <p>{error}</p>
@@ -38,6 +44,7 @@ const Weather: React.FC = () => {
           ))}
         </ul>
       )}
+    <Footer />
     </div>
   );
 };
