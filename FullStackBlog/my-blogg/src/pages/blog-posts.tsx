@@ -24,11 +24,10 @@ const BlogPostsPage: React.FC = () => {
   }, []);
 
   return (
-    <div>
-    <Header />
-    <SideMenu />
-    <div className={`${styles.headerSpace} bg-light p-4`}>
-      <div className="col-lg-15 text-center">
+    <div className={`${styles.container}`}>
+      <Header />
+      <SideMenu />
+      <div className="col-lg-12 text-center">
         <h2>Blog Posts</h2>
         {deleted === 'true' && <p className={styles.deleteMessage}>Blog post has been deleted.</p>}
         <div className={styles.blogPostContainer}>
@@ -41,9 +40,8 @@ const BlogPostsPage: React.FC = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
-    <Footer />
-  </div>
   );
 };
 

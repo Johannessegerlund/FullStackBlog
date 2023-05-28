@@ -64,10 +64,10 @@ const CreateBlogPostPage: React.FC = () => {
   }, [router.query.id]);
 
   return (
-    <div>
+    <div className={styles.container}>
       <SideMenu />
       <Header />
-      <div className={styles.container}>
+      <div className={styles.createPostContainer}>
         <h2 className={styles.title}>{router.query.id ? 'Update' : 'Create New'} Blog Post</h2>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.formGroup}>

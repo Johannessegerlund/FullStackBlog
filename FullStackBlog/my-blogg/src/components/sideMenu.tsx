@@ -7,7 +7,12 @@ const SideMenu: React.FC = () => {
     return (
       <nav className={`bg-dark ${styles.sideMenu} ${styles.left}`}>
         <ul className="nav flex-column">
-          <li className="nav-item" style={{ marginTop: '30%' }}>
+        <li className="nav-item" style={{ marginTop: '30%' }}>
+            <Link  className="nav-link text-white text-decoration:none"  href="/">
+              <p>Hem</p>
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link  className="nav-link text-white text-decoration:none"  href="/blog-posts">
               <p>Blog Post</p>
             </Link>

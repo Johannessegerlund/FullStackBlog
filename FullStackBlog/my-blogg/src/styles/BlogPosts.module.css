@@ -1,12 +1,16 @@
-.headerSpace {
-  margin-top: 10%;
+.container {
+  background-color: rgb(240, 237, 237);
+  height: 100vh;
+  padding-top: 10%;
+  margin-left: 200px;
 }
 
 .blogPostContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
-  padding-left: 15%;
+  margin: auto;
+  max-width: 600px;
+  justify-content: center;
 }
 
 .blogPostItem {
@@ -32,7 +36,7 @@
   font-size: 300px;
 }
 .deleteMessage {
-  color: red;
+  color: rgb(90, 203, 251);
   font-weight: bold;
   margin-bottom: 10px;
 }

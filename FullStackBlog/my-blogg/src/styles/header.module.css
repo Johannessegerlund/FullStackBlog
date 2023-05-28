@@ -1,20 +1,21 @@
 .headerTitle {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #0000009a;
-    padding: 20px;
-    text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0000009a;
+  padding: 20px;
+  text-align: center;
 }
 
 .headerTitle h1 {
-    color: white;
-  font-size: 24px; /* Adjust the font size as desired */
-  margin: 0; /* Remove the margin to eliminate any extra space */
-  text-transform: uppercase; /* Make the text uppercase */
+  color: white;
+  font-size: 24px; 
+  margin: 0; 
+  text-transform: uppercase; 
+  margin-left: 200px;
 }
 
 .headerLine {
-  display: none; /* Hide the line */
+  display: none; 
 }

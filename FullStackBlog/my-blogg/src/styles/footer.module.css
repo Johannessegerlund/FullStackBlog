@@ -6,12 +6,11 @@
   background-color: #0000009a;
   padding: 20px;
   text-align: center;
+  margin-left: 200px;
 }
 
-
-
 .footerText {
-    color: #fafafa;
+  color: #fafafa;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   margin-top: 10px;
