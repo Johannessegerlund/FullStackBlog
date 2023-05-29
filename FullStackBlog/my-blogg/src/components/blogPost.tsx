@@ -1,12 +1,12 @@
 import React from 'react';
 import { BiTrash, BiPen } from 'react-icons/bi';
 import styles from '../styles/BlogPostPage.module.css';
-import { Blogpost } from '../models/blogPost';
+import { blogPost } from '../models/blogPost';
 import { deleteBlogPost } from '../../api';
 import { useRouter } from 'next/router';
 
 interface BlogPostProps {
-  blogPost: Blogpost | undefined;
+  blogPost: blogPost | undefined;
 }
 
 const BlogPost: React.FC<BlogPostProps> = ({ blogPost }) => {

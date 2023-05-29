@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { getBlogPosts } from '../../api';
-import { Blogpost } from '../models/blogPost';
+import { blogPost } from '../models/blogPost';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import SideMenu from '../components/sideMenu';
@@ -31,7 +31,7 @@ const BlogPostsPage: React.FC = () => {
         <h2>Blog Posts</h2>
         {deleted === 'true' && <p className={styles.deleteMessage}>Blog post has been deleted.</p>}
         <div className={styles.blogPostContainer}>
-          {blogPosts.map((blogPost: Blogpost) => (
+          {blogPosts.map((blogPost: blogPost) => (
             <Link className="nav-link text-black text-decoration:none" key={blogPost.id} href={`/blog-post/${blogPost.id}`}>
               <div className={styles.blogPostItem}>
                 <h3 className={styles.blogPostTitle}>{blogPost.title}</h3>
