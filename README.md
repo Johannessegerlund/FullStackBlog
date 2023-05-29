@@ -23,29 +23,4 @@ Steg 9: Skriv npm run dev i terminalen
 
 Gå in på urln och du har nu startat programmet och kan skapa, ta bort och updatera blog poster.
 
-#English
 
-#FullStackBlog
-A blog made in React Next.js and .NET 7 C#
-
-To download the blog creator, follow this guide.
-
-Step 1: Click on the green button CODE.
-
-Step 2: Choose HTTPS.
-
-Step 3: Choose any command-line interface (I use Git Bash or Tortoise).
-
-Step 4: Write "Git clone" and paste the link.
-
-Step 5: Go into the FullStackBlog folder and click on the FullStackBlog.sln file (You need Visual Studio).
-
-Step 6: Start the FullStackApi project (Swagger will open, and you will see some requests being made here).
-
-Step 7: Go into the my-blog folder in Visual Studio Code or a new window.
-
-Step 8: Open a new terminal and write "npm install" (You must have npm installed).
-
-Step 9: Write "npm run dev" in the terminal.
-
-Go to the URL, and you have now started the program and can create, delete and update blog posts.
