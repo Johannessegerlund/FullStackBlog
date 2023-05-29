@@ -12,11 +12,11 @@ interface BlogPostProps {
 const BlogPost: React.FC<BlogPostProps> = ({ blogPost }) => {
   const router = useRouter();
 
-  const blogPostId = Number(router.query.id);
+  const blogPostId = router.query.id;
 
   const handleDelete = async () => {
     try {
-      await deleteBlogPost(blogPostId);
+      await deleteBlogPost(blogPostId!.toString());
       router.push(`/blog-posts?deleted=true`);
     } catch (error) {
       throw new Error(`Failed to delete blogpost with id ${blogPost?.id}`);
@@ -36,11 +36,11 @@ const BlogPost: React.FC<BlogPostProps> = ({ blogPost }) => {
           <div className={styles.buttonContainer}>
             <span className={styles.tooltip}>
               <BiTrash onClick={handleDelete} className={styles.icon} />
-              <span className={styles.tooltipText}>Delete</span>
+              <span className={styles.tooltipText}>Ta Bort</span>
             </span>
             <span className={styles.tooltip}>
               <BiPen onClick={handleUpdate} className={styles.icon} />
-              <span className={styles.tooltipText}>Update</span>
+              <span className={styles.tooltipText}>Uppdatera</span>
             </span>
           </div>
         )}

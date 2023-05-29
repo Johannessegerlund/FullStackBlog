@@ -28,23 +28,17 @@ const CreateBlogPostPage: React.FC = () => {
     };
 
     if (router.query.id) {
-      // If query id exists, it means we are updating the blog post
       try {
-        await updateBlogPost(parseInt(router.query.id as string), blogPost);
-        // Redirect to the blog post details page
+        await updateBlogPost(router.query.id.toString(), blogPost);
         router.push(`/blog-post/${router.query.id}`);
       } catch (error) {
         throw new Error(`Failed to update blog post with id ${router.query.id}`);
       }
     } else {
-      // Create new blog post
       const createdBlogPost = await createBlogPost(blogPost);
-
       if (createdBlogPost) {
-        // Redirect to the blog post details page
         router.push(`/blog-post/${createdBlogPost.id}`);
       } else {
-        // Handle error
         throw new Error('Failed to create blog post, please try again later');
       }
     }
@@ -53,8 +47,7 @@ const CreateBlogPostPage: React.FC = () => {
   useEffect(() => {
     const fetchBlogPost = async () => {
       if (router.query.id) {
-        // Fetch the blog post details using the ID from the query parameter
-        const fetchedBlogPost = await getBlogPostById(parseInt(router.query.id as string));
+        const fetchedBlogPost = await getBlogPostById(router.query.id.toString());
         setTitle(fetchedBlogPost.title);
         setContent(fetchedBlogPost.content);
       }
@@ -68,18 +61,18 @@ const CreateBlogPostPage: React.FC = () => {
       <SideMenu />
       <Header />
       <div className={styles.createPostContainer}>
-        <h2 className={styles.title}>{router.query.id ? 'Update' : 'Create New'} Blog Post</h2>
+        <h2 className={styles.title}>{router.query.id ? 'Uppdatera' : 'Skapa nytt'} Blogginlägg</h2>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.formGroup}>
-            <label htmlFor="title">Title:</label>
+            <label htmlFor="title">Titel:</label>
             <input type="text" id="title" value={title} onChange={handleTitleChange} className={styles.input} />
           </div>
           <div className={styles.formGroup}>
-            <label htmlFor="content">Content:</label>
+            <label htmlFor="content">Innehåll:</label>
             <textarea id="content" value={content} onChange={handleContentChange} className={styles.textarea} />
           </div>
           <button type="submit" className={styles.createButton}>
-            {router.query.id ? 'Update' : 'Create'}
+            {router.query.id ? 'Uppdatera' : 'Skapa'}
           </button>
         </form>
       </div>

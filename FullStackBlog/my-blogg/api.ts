@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Blogpost } from './src/models/blogPost'
+import { blogPost } from './src/models/blogPost'
 
 async function fetchWeatherForecasts() {
   try {
@@ -20,7 +20,7 @@ async function getBlogPosts() {
   }
 };
 
-async function getBlogPostById(id: number) {
+async function getBlogPostById(id: string) {
   try {
     const response = await axios.get(`https://localhost:7202/blogpost/${id}`);
     return response.data;
@@ -30,7 +30,7 @@ async function getBlogPostById(id: number) {
   }
 };
 
-async function createBlogPost(blogPost: Blogpost) {
+async function createBlogPost(blogPost: blogPost) {
   try {
     const response = await axios.post('https://localhost:7202/blogpost', blogPost);
     return response.data;
@@ -40,7 +40,7 @@ async function createBlogPost(blogPost: Blogpost) {
   }
 };
 
-async function updateBlogPost(id: number, updatedBlogPost: Blogpost) {
+async function updateBlogPost(id: string, updatedBlogPost: blogPost) {
   try {
     const response = await axios.put(`https://localhost:7202/blogpost/${id}`, updatedBlogPost);
     return response.data;
@@ -50,7 +50,7 @@ async function updateBlogPost(id: number, updatedBlogPost: Blogpost) {
   }
 };
 
-async function deleteBlogPost(id: number) {
+async function deleteBlogPost(id: string) {
   try {
     const response = await axios.delete(`https://localhost:7202/blogpost/${id}`);
     return response.data;

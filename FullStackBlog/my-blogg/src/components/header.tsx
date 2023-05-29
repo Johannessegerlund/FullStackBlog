@@ -5,7 +5,7 @@ const Header: React.FC = () => {
   return (
     <header>
       <div className={styles.headerTitle}>
-        <h1>Välkommen till Allt och Inget</h1>
+        <h1>Välkommen till Johannes Blogg</h1>
        
       </div>
     </header>

@@ -11,14 +11,15 @@ import { useRouter } from 'next/router';
 const BlogPostsPage: React.FC = () => {
   const router = useRouter();
   const [blogPost, setBlogPost] = useState<blogPost>();
-  const blogPostId = Number(router.query.id);
+  const blogPostId = router.query.id;
+
   useEffect(() => {
     const fetchBlogPost = async () => {
-      const fetchedBlogPost = await getBlogPostById(blogPostId);
+      const fetchedBlogPost = await getBlogPostById(blogPostId!.toString());
       setBlogPost(fetchedBlogPost);
     };
 
-    if (!isNaN(blogPostId)) {
+    if (blogPostId) {
       fetchBlogPost();
     }
   }, [blogPostId]);

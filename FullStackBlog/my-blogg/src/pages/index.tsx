@@ -4,12 +4,12 @@ import Footer from '../components/footer';
 import SideMenu from '../components/sideMenu';
 import { getBlogPosts } from '../../api';
 import React, { useEffect, useState } from 'react';
-import { Blogpost } from '../models/blogPost';
+import { blogPost } from '../models/blogPost';
 import BlogPost from '../components/blogPost';
 import styles from '../styles/home.module.css';
 
 const Home: React.FC = () => {
-  const [blogPosts, setBlogPosts] = useState<Blogpost[]>();
+  const [blogPosts, setBlogPosts] = useState<blogPost[]>();
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
@@ -24,7 +24,6 @@ const Home: React.FC = () => {
       <SideMenu />
       <Header />
       <div className={styles.blogPosts}>
-
         {blogPosts?.map((blogPost) => (
           <BlogPost
           key={blogPost.id}

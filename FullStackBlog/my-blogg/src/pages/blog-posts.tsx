@@ -28,8 +28,8 @@ const BlogPostsPage: React.FC = () => {
       <Header />
       <SideMenu />
       <div className="col-lg-12 text-center">
-        <h2>Blog Posts</h2>
-        {deleted === 'true' && <p className={styles.deleteMessage}>Blog post has been deleted.</p>}
+        <h2>Blogginlägg</h2>
+        {deleted === 'true' && <p className={styles.deleteMessage}>Blogginlägget är borttaget.</p>}
         <div className={styles.blogPostContainer}>
           {blogPosts.map((blogPost: blogPost) => (
             <Link className="nav-link text-black text-decoration:none" key={blogPost.id} href={`/blog-post/${blogPost.id}`}>

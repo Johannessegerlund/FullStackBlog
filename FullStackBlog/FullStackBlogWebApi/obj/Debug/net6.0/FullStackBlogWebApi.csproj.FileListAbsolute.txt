@@ -30,3 +30,4 @@ C:\Users\TinaW\OneDrive\Skrivbord\ProjBlogg\FullStackBlog\FullStackBlog\FullStac
 C:\Users\TinaW\OneDrive\Skrivbord\ProjBlogg\FullStackBlog\FullStackBlog\FullStackBlogWebApi\obj\Debug\net6.0\FullStackBlogWebApi.pdb
 C:\Users\TinaW\OneDrive\Skrivbord\ProjBlogg\FullStackBlog\FullStackBlog\FullStackBlogWebApi\obj\Debug\net6.0\FullStackBlogWebApi.genruntimeconfig.cache
 C:\Users\TinaW\OneDrive\Skrivbord\ProjBlogg\FullStackBlog\FullStackBlog\FullStackBlogWebApi\obj\Debug\net6.0\ref\FullStackBlogWebApi.dll
+C:\Users\TinaW\OneDrive\Skrivbord\ProjBlogg\FullStackBlog\FullStackBlog\FullStackBlogWebApi\bin\Debug\net6.0\blogposts.json
