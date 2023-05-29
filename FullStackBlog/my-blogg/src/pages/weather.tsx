@@ -4,6 +4,8 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import SideMenu from '../components/sideMenu';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from '../styles/weather.module.css';
+
 
 type WeatherForecast = {
   date: string;
@@ -29,9 +31,10 @@ const Weather: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className={`${styles.container}`}>
         <Header/>
         <SideMenu />
+        <div className={`${styles.weatherContainer}`} >
       <h1>Weather Forecasts</h1>
       {error ? (
         <p>{error}</p>
@@ -44,7 +47,9 @@ const Weather: React.FC = () => {
           ))}
         </ul>
       )}
+      </div>
     <Footer />
+    
     </div>
   );
 };

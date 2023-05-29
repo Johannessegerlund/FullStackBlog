@@ -1,33 +1,32 @@
-/* BlogPostPage.module.css */
-
 .headerSpace {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 40vh; Set the height of the box to occupy the full viewport height */
+  background-color: rgb(240, 237, 237);
+  height: 100vh;
+  margin-left: 200px;
+  
 }
-
 
 .blogPostContent {
-  font-size: 18px; /* Adjust the font size as desired */
-  line-height: 1.5; /* Adjust the line height as desired */
+  font-size: 18px; 
+  line-height: 1.5; 
 }
-/* BlogPostPage.module.css */
 
 .blogPostContainer {
-  width: 800px; /* Adjust the width of the container as needed */
-  background-color: #f8f9fa; /* Light gray background color */
-  border-radius: 5px; /* Rounded corners */
+  width: 800px; 
+  background-color: #f8f9fa; 
+  border-radius: 5px; 
   padding: 20px; 
   height: 600px;
 }
 
 .blogPostTitle {
   text-align: center; 
-  font-size: 32px; /* Adjust the font size as desired */
-  font-weight: bold; /* Make the title bold */
-  margin-bottom: 20px; /* Add some spacing between the title and content */
-  margin-top: 10%; /* Position the title 10% underneath the header */
+  font-size: 32px; 
+  font-weight: bold; 
+  margin-bottom: 20px; 
+  margin-top: 10%; 
 }
 .tooltip {
   position: relative;

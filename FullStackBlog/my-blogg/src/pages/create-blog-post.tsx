@@ -4,7 +4,7 @@ import { createBlogPost, getBlogPostById, updateBlogPost } from '../../api';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import SideMenu from '../components/sideMenu';
-import styles from '../styles/CreateBlogPostPage.module.css';
+import styles from '../styles/createBlogPostPage.module.css';
 
 const CreateBlogPostPage: React.FC = () => {
   const [title, setTitle] = useState('');

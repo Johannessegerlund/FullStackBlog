@@ -4,7 +4,7 @@ import Footer from '../components/footer';
 import SideMenu from '../components/sideMenu';
 import { getBlogPosts } from '../../api';
 import React, { useEffect, useState } from 'react';
-import { Blogpost } from '../models/Blogpost';
+import { Blogpost } from '../models/blogPost';
 import BlogPost from '../components/blogPost';
 import styles from '../styles/home.module.css';
 

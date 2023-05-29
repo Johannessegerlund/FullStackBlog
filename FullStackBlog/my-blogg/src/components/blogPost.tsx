@@ -1,7 +1,7 @@
 import React from 'react';
 import { BiTrash, BiPen } from 'react-icons/bi';
 import styles from '../styles/BlogPostPage.module.css';
-import { Blogpost } from '../models/Blogpost';
+import { Blogpost } from '../models/blogPost';
 import { deleteBlogPost } from '../../api';
 import { useRouter } from 'next/router';
 

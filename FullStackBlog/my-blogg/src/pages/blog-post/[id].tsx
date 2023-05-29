@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getBlogPostById } from '../../../api';
-import { Blogpost } from '../../models/Blogpost';
+import { Blogpost } from '../../models/blogPost';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import SideMenu from '../../components/sideMenu';

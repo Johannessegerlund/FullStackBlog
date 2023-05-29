@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Blogpost } from './src/models/Blogpost'
+import { Blogpost } from './src/models/blogPost'
 
 async function fetchWeatherForecasts() {
   try {

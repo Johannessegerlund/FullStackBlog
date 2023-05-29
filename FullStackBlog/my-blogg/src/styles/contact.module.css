@@ -1,0 +1,14 @@
+.container {
+    background-color: rgb(240, 237, 237);
+    height: 100vh;
+    padding-top: 10%;
+    margin-left: 200px;
+  }
+
+  .contactContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 600px;
+    justify-content: center;
+  }
